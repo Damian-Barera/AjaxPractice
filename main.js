@@ -19,9 +19,12 @@ function bringData() {
             let i = 0;
 
             for (let item of data.serie) {
-                response.innerHTML += `<li> ${item.valor} </li>`
+                response.innerHTML += `
+                <li> ${item.fecha.slice(0,10)} </li>
+                <li>$ ${item.valor} </li>
+                `
                 i++;
-                if(i>5){
+                if(i>=5){
                     break;
                 }
             }
